@@ -24,6 +24,14 @@ public class alert {
 		 Alert alert = driver.switchTo().alert();
 		 
 		 System.out.println(alert.getText());
+		 String text = alert.getText();
+		 if(text.equals("Please enter a valid user name")) {
+			 System.out.println("Correct alert");
+		 }
+			 else {
+				 System.out.println("Incorrect alert");
+			 }
+		 
 		 
 		 alert.accept(); //ok button
 		 

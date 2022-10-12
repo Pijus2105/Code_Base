@@ -31,18 +31,27 @@ public class window_handle {
 		 Set<String> hand = driver.getWindowHandles();
 		 
    	Iterator<String> it = hand.iterator();
-   	 String parent = it.next();
-   	 String child = it.next();
+   	
+   	String parentWindowId = it.next();
+   	System.out.println("print" + parentWindowId);
+   	System.out.println("parent title" + driver.getTitle());
+   	
+   	String childWindowId = it.next();
+   	System.out.println("print" + childWindowId);
+   
+   	
+   	System.out.println("child title" + driver.getTitle());
+   	
+	driver.switchTo().window(childWindowId);
+	Select se = new Select(driver.findElement(By.xpath("//select[@id='multipck_value1']")));
+	 
+	 se.selectByValue("5");
    	 
-   	 driver.switchTo().window(child);
-   	 
-   	// driver.switchTo().window(parent);
-   	    	 			
-		
+   	driver.switchTo().window(parentWindowId); 
+   	  	    	 			
+    
 				 
-				 Select se = new Select(driver.findElement(By.id("multipck_value1")));
 				 
-				 se.selectByValue("5");
 	}
 
 }
