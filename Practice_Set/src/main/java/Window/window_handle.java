@@ -1,4 +1,4 @@
-package Window_Handle;
+package Window;
 
 import java.time.Duration;
 import java.util.Iterator;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class add_credit_issuewire {
+public class window_handle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,13 +35,14 @@ public class add_credit_issuewire {
    	 String child = it.next();
    	 
    	 driver.switchTo().window(child);
+   	 
+   	// driver.switchTo().window(parent);
    	    	 			
 		
 				 
 				 Select se = new Select(driver.findElement(By.id("multipck_value1")));
 				 
 				 se.selectByValue("5");
-
 	}
 
 }
