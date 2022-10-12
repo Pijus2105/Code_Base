@@ -15,11 +15,11 @@ public class alert {
 		 WebDriver driver = new ChromeDriver();
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		 driver.get("https://www.issuewire.com/");
+		 driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 		 
-		 driver.findElement(By.xpath("//a[@title='login']")).click();
+		 driver.findElement(By.xpath("//input[@name='proceed']")).click();
 		 
-		 driver.findElement(By.xpath("//input[@value='Login']")).click(); //click button
+		
 		 
 		 Alert alert = driver.switchTo().alert();
 		 
@@ -27,7 +27,7 @@ public class alert {
 		 
 		 alert.accept(); //ok button
 		 
-		 alert.dismiss(); //cancel button
+		// alert.dismiss(); //cancel button
 	}
 
 }
